@@ -19,7 +19,9 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this, "Enter the name first ", Toast.LENGTH_SHORT).show()
             }else{
                 val intent = Intent(this,QuizQuestionActivity::class.java)
-                startActivity(intent    )
+                intent.putExtra(Constants.USER_NAME,editTextN.text.toString())
+                startActivity(intent)
+                finish()
             }
         }
     }
